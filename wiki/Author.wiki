@@ -1,8 +1,7 @@
-#Information about the author
+=Hi, there=
 
-= Introduction =
-
-Hi,more details can be found on my [http://kbac70.blogspot.com Blog] at the moment. 
+More details can be found on my [http://kbac70.blogspot.com Blog] at the moment. 
 
 
 - KBac
+
