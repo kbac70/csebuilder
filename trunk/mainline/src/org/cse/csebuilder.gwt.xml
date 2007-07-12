@@ -1,0 +1,14 @@
+<module>
+
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.google.gwt.json.JSON"/>
+	<inherits name="com.google.gwt.i18n.I18N"/>
+	<inherits name="com.google.gwt.xml.XML"/>
+
+	<entry-point class='org.cse.client.csebuilder'/>
+
+  	<extend-property name="locale" values="pl" />
+  
+  	<stylesheet src='csebuilder.css'/>
+  	
+</module>
