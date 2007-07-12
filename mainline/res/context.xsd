@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="AdSense" type="xs:string"/>
+	<xs:element name="BackgroundLabels">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Label" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Colors">
+		<xs:complexType>
+			<xs:attribute name="url" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#008000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="background" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#FFFFFF"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="border" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#FFFFFF"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="title" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#0000CC"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="text" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#000000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="visited" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#663399"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="light" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="#000000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Context">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Facet" maxOccurs="unbounded"/>
+				<xs:element ref="BackgroundLabels"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CustomSearchEngine">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Context"/>
+				<xs:element ref="LookAndFeel"/>
+				<xs:element ref="AdSense"/>
+			</xs:sequence>
+			<xs:attribute name="version" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="1.0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="volunteers" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:boolean">
+						<xs:enumeration value="true"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="keywords" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="&quot;business intelligence&quot; &quot;bi&quot; &quot;olap&quot; &quot;analytics&quot; &quot;reporting&quot; &quot;data mining&quot; &quot;performance management&quot;"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Title" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Description" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="language" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="en"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Facet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FacetItem" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FacetItem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Label"/>
+			</xs:sequence>
+			<xs:attribute name="Title" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GoogleCustomizations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CustomSearchEngine"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Label">
+		<xs:complexType>
+			<xs:attribute name="name" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="mode" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="BOOST"/>
+						<xs:enumeration value="ELIMINATE"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Rewrite">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="IgnoreBackgroundLabels">
+				<xs:simpleType>
+					<xs:restriction base="xs:boolean">
+						<xs:enumeration value="false"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="weight">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="0.7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LookAndFeel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Colors"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

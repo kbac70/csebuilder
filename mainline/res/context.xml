@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoogleCustomizations>
+  <CustomSearchEngine version="1.0" volunteers="true" keywords="&quot;blog&quot;&quot;kbac&quot;" Title="KBac Search" Description="Use this engine to perform faster and more relevant searches for KBac" language="en">
+    <Context>
+      <Facet>
+        <FacetItem Title="Vendors">
+          <Label name="vendors" mode="BOOST" Rewrite="vendor OR manufacturer OR provider" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+        <FacetItem Title="Papers">
+          <Label name="papers" mode="BOOST" Rewrite="paper OR papers" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+        <FacetItem Title="Forums">
+          <Label name="forums" mode="BOOST" Rewrite="forum OR wiki OR group OR portal" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+      </Facet>
+      <Facet>
+        <FacetItem Title="Magazines">
+          <Label name="magazines" mode="BOOST" Rewrite="magazine" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+        <FacetItem Title="Articles">
+          <Label name="articles" mode="BOOST" Rewrite="article OR articles" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+      </Facet>
+      <Facet>
+        <FacetItem Title="Blogs">
+          <Label name="blogs" mode="BOOST" Rewrite="blog OR weblog " IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+      </Facet>
+      <Facet>
+        <FacetItem Title="Events">
+          <Label name="events" mode="BOOST" Rewrite="event OR talk OR meeting OR fair" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+        <FacetItem Title="Jobs">
+          <Label name="jobs" mode="BOOST" Rewrite="job OR jobs OR post" IgnoreBackgroundLabels="false" weight="0.7"/>
+        </FacetItem>
+      </Facet>
+      <BackgroundLabels>
+        <Label name="_cse_tsgndoawkce" mode="BOOST" weight="0.7"/>
+        <Label name="_cse_exclude_tsgndoawkce" mode="ELIMINATE"/>
+      </BackgroundLabels>
+    </Context>
+    <LookAndFeel>
+      <Colors url="#008000" background="#FFFFFF" border="#FFFFFF" title="#0000CC" text="#000000" visited="#663399" light="#000000"/>
+    </LookAndFeel>
+    <AdSense/>
+  </CustomSearchEngine>
+</GoogleCustomizations>

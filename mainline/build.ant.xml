@@ -1,0 +1,141 @@
+<?xml version="1.0" standalone="yes"?>
+<project basedir="." default="test" name="csebuilder">
+	
+	<!-- Author: KBac -->
+
+	<!-- Property definitions -->
+	<property file="build.ant.properties"/>
+	<property name="cache.dir" value="${basedir}/.gwt-cache"/>
+	<property name="www.dir" value="${basedir}/www"/>
+	<property name="www.test.dir" value="${www.dir}-test"/>
+	<property name="tomcat.dir" value="${basedir}/tomcat"/>
+	<property name="bin.dir" value="${basedir}/bin"/>
+	<property name="project.module" value="${project.package.name}.${project.module.name}"/>
+	<property name="src.dir" value="${basedir}/src"/>
+	<property name="test.dir" value="${basedir}/test"/>
+	<property name="gwt.args.test" value="&quot;-Dgwt.args=-out ${www.test.dir}&quot;"/>
+	<property name="gwt.args.compile.js" value="-logLevel ${gwt.log.level} -out ${www.dir} ${project.module}"/>
+	<property name="doc.dir" value="${basedir}/doc/api"/>
+	
+	<!-- Fileset definitions -->
+	<fileset id="gwt.jars" dir="${gwt.home}" includes="*.jar"/>
+	<fileset id="test.files" dir="${test.dir}">
+		<include name="**/*Test.java"/>
+		<include name="**/*TestCase.java"/>		
+		<exclude name="**/Abstract*Test.java"/>
+		<exclude name="**/Abstract*TestCase.java"/>		
+	</fileset>
+
+	<!-- Path definitions -->
+	<path id="compile.java.classpath">
+		<fileset refid="gwt.jars"/>
+		<pathelement path="${junit.jar}"/>
+		<pathelement path="${src.dir}"/>
+		<pathelement path="${test.dir}"/>
+	</path>
+	<path id="compile.js.classpath">
+		<fileset refid="gwt.jars"/>
+		<pathelement path="${junit.jar}"/>
+		<pathelement path="${src.dir}"/>
+	</path>
+	<path id="tests.classpath">
+		<path refid="compile.java.classpath"/>
+		<pathelement path="${bin.dir}"/>
+	</path>
+	<path id="compile.javadoc.classpath">
+		<fileset refid="gwt.jars"/>		
+		<pathelement path="${src.dir}"/>
+	</path>
+
+	<!-- Target definitions -->
+	<!-- 
+	NB: All targets with dots in their name (e.g. clean.up) do not define 
+	dependencies for flexibility of use. 
+	-->
+	<target name="clean.up" description="Cleans up the directory structure">
+		<echo message="Cleaning the directories"/>		
+		<delete dir="${cache.dir}"/>
+		<delete dir="${www.dir}"/>
+		<delete dir="${www.test.dir}"/>
+		<delete dir="${tomcat.dir}"/>
+		<delete dir="${bin.dir}"/>
+		<delete dir="${doc.dir}"/>
+		<mkdir dir="${bin.dir}"/>
+		<mkdir dir="${doc.dir}"/>
+	</target>
+	
+	
+	<target name="compile.java" description="Compiles JAVA classes">
+		<echo message="Compiling JAVA code"/>
+		<javac 
+			destdir="${bin.dir}" 
+			debug="on" 
+			verbose="yes"
+			source="1.4" 
+			srcdir="${src.dir}:${test.dir}"
+			fork="true"
+			executable="${jdk.dir}/bin/${javac.exe}"
+			>			
+				<classpath refid="compile.java.classpath"/>
+		</javac>
+	</target>
+	
+	<target name="compile.doc" description="Compiles JavaDoc">
+		<echo message="Compiling JAVADOC"/>
+		<javadoc
+			destdir="${doc.dir}"
+		    author="yes"
+		    version="yes"
+		    use="yes"
+			verbose="yes"	
+		    windowtitle="${project.module.name} API"			
+			>
+			<classpath refid="compile.javadoc.classpath"/>			
+			<fileset dir="${src.dir}" defaultexcludes="yes">
+		    	<include name="**/*.java"/>
+		    </fileset>
+			<doctitle>${project.module.name} Class Reference</doctitle>
+		    <bottom>${license.html}</bottom>
+		    <tag name="TODO" scope="all" description="To do:"/>
+		    <link 
+		    	offline="true" 
+		    	href="http://java.sun.com/j2se/1.5.0/docs/api/" 
+		    	packagelistLoc="${jdk.dir}/docs/api/"
+		    />
+		    <link 
+		    	offline="true" 
+		    	href="http://code.google.com/webtoolkit/documentation/" 
+		    	packagelistLoc="${gwt.home}/javadoc/"
+		    />
+		  </javadoc>
+	</target>
+
+	
+	<target name="compile.js" description="Directs GWT to compile JAVA into JS">
+		<echo message="Compiling into JS code"/>
+		<java classname="com.google.gwt.dev.GWTCompiler" fork="yes">			
+			<classpath refid="compile.js.classpath"/>
+			<arg line="${gwt.args.compile.js}"/>
+		</java>				
+	</target>	
+
+	
+	<target name="compile" depends="clean.up,compile.java,compile.js,compile.doc"/>		
+	
+	
+	<target name="test.hosted" description="Executes JUNIT tests in hosted env">				
+		<junit fork="no" haltonerror="yes" printsummary="yes" showoutput="yes" >
+			<classpath refid="tests.classpath"/>
+			<jvmarg line="${gwt.args.test}"/>
+			<formatter type="plain"/>				
+			<batchtest fork="yes" haltonerror="no" todir="${bin.dir}">
+				<fileset refid="test.files"/>
+			</batchtest>			
+		</junit>
+	</target>	
+	
+	
+	<target name="test" depends="compile, test.hosted"/>
+	
+
+</project>
