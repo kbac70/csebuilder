@@ -1,0 +1,3 @@
+#summary Where to find working prototype
+
+Working prototype is hosted [http://gadgets.kbac70.googlepages.com/csebuilder.html here]on the Google Pages.
