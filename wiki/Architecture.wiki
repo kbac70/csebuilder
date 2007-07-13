@@ -1,3 +1,4 @@
 #summary Architecture of the project
+#labels Featured,Design
 
 For flash presentation of the architecture navigate [http://kbac70.blogspot.com/2007/07/custom-search-engine-builder.html here]
