@@ -1,5 +1,5 @@
 #summary Architecture of the project
-#labels Featured,Phase-Design,UML
+#labels Featured,Phase-Requirements,Phase-Design,Phase-Deploy,Phase-Implementation,UML
 
 The idea was to keep the subsystems small, low coupled and testable.
 But following the rule that:
@@ -13,6 +13,5 @@ I have created the demonstration discussing the architecture on canvas of the UM
   * Collaboration Diagrams for the algorithm descriptions
 
 For flash presentation of the architecture navigate [http://kbac70.blogspot.com/2007/07/custom-search-engine-builder.html here]
-
 
 
