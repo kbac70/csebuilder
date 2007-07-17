@@ -1,0 +1,6 @@
+#summary Information about unit testing
+#labels Phase-QA
+
+The project is unit tested using GWT unit testing framework. It includes asynchronous tests to simulate interaction with remote data providers. 
+
+For more details check [http://kbac70.blogspot.com/2007/07/custom-search-engine-builder.html here].
