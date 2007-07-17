@@ -4261,7 +4261,7 @@
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='false'/>
+					<active xmi:value='true'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_12_5_1_3fb0192_1184338900203_746137_4512'>
 							<elementID xmi:idref='_12_5_1_3fb0192_1184338900203_950468_4498'/>
@@ -6393,15 +6393,22 @@
 			<mdElement elementClass='Diagram' xmi:id='_12_5_1_3fb0192_1184346439515_294556_6207' name='Fetches Tags' visibility='public' context='_12_5_1_3fb0192_1184346439515_403555_6209' ownerOfDiagram='_12_5_1_3fb0192_1184346439515_403555_6209'>
 				<mdElement elementClass='DiagramPresentationElement' xmi:id='_12_5_1_3fb0192_1184346439515_581277_6208'>
 					<elementID xmi:idref='_12_5_1_3fb0192_1184346439515_294556_6207'/>
+					<properties>
+						<mdElement elementClass='BooleanProperty'>
+							<propertyID>SHOW_GRID</propertyID>
+							<propertyDescriptionID>SHOW_GRID_DESCRIPTION</propertyDescriptionID>
+							<value xmi:value='false'/>
+						</mdElement>
+					</properties>
 					<type>Sequence Diagram</type>
 					<umlType>Sequence Diagram</umlType>
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramWindowBounds>3, 25, 862, 674</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='540'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='true'/>
+					<active xmi:value='false'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_12_5_1_3fb0192_1184346439531_409075_6221'>
 							<elementID xmi:idref='_12_5_1_3fb0192_1184346439515_294556_6207'/>
@@ -7059,13 +7066,20 @@
 			<mdElement elementClass='Diagram' xmi:id='_12_5_1_3fb0192_1184347491171_135114_6682' name='Defines Tag' visibility='public' context='_12_5_1_3fb0192_1184347491171_652470_6684' ownerOfDiagram='_12_5_1_3fb0192_1184347491171_652470_6684'>
 				<mdElement elementClass='DiagramPresentationElement' xmi:id='_12_5_1_3fb0192_1184347491171_399111_6683'>
 					<elementID xmi:idref='_12_5_1_3fb0192_1184347491171_135114_6682'/>
+					<properties>
+						<mdElement elementClass='BooleanProperty'>
+							<propertyID>SHOW_GRID</propertyID>
+							<propertyDescriptionID>SHOW_GRID_DESCRIPTION</propertyDescriptionID>
+							<value xmi:value='false'/>
+						</mdElement>
+					</properties>
 					<type>Sequence Diagram</type>
 					<umlType>Sequence Diagram</umlType>
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramWindowBounds>3, 25, 862, 674</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='60'/>
 					<maximized xmi:value='false'/>
 					<active xmi:value='false'/>
 					<mdOwnedViews>
@@ -7283,13 +7297,20 @@
 			<mdElement elementClass='Diagram' xmi:id='_12_5_1_3fb0192_1184347764781_775551_6829' name='Generates Annotations' visibility='public' context='_12_5_1_3fb0192_1184347764781_517086_6831' ownerOfDiagram='_12_5_1_3fb0192_1184347764781_517086_6831'>
 				<mdElement elementClass='DiagramPresentationElement' xmi:id='_12_5_1_3fb0192_1184347764781_316430_6830'>
 					<elementID xmi:idref='_12_5_1_3fb0192_1184347764781_775551_6829'/>
+					<properties>
+						<mdElement elementClass='BooleanProperty'>
+							<propertyID>SHOW_GRID</propertyID>
+							<propertyDescriptionID>SHOW_GRID_DESCRIPTION</propertyDescriptionID>
+							<value xmi:value='false'/>
+						</mdElement>
+					</properties>
 					<type>Sequence Diagram</type>
 					<umlType>Sequence Diagram</umlType>
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramWindowBounds>3, 25, 862, 674</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='480'/>
 					<maximized xmi:value='false'/>
 					<active xmi:value='false'/>
 					<mdOwnedViews>
@@ -8047,7 +8068,7 @@
 					<mdElement elementClass='StringProperty'>
 						<propertyID>DIAGRAMS_LAYOUT</propertyID>
 						<propertyDescriptionID>DIAGRAMS_LAYOUT_DESCRIPTION</propertyDescriptionID>
-						<value>0 0 0 14 0 0 0 1 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 36 0 34 0 33 0 39 0 35 0 31 0 35 0 5f 0 32 0 39 0 34 0 35 0 35 0 36 0 5f 0 36 0 32 0 30 0 37 0 0 0 1 0 0 0 ce 0 0 0 e4 0 0 0 5 0 0 0 a 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 30 0 30 0 38 0 39 0 34 0 36 0 38 0 5f 0 37 0 37 0 39 0 37 0 34 0 39 0 5f 0 32 0 33 0 32 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 36 0 38 0 38 0 38 0 30 0 37 0 38 0 5f 0 32 0 37 0 31 0 30 0 33 0 5f 0 33 0 35 0 37 0 30 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 31 0 37 0 30 0 35 0 39 0 33 0 37 0 5f 0 36 0 39 0 31 0 37 0 35 0 37 0 5f 0 31 0 31 0 39 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 38 0 33 0 30 0 35 0 32 0 33 0 34 0 5f 0 38 0 32 0 30 0 38 0 37 0 37 0 5f 0 34 0 32 0 31 0 35 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 39 0 37 0 34 0 32 0 33 0 35 0 39 0 5f 0 39 0 30 0 35 0 32 0 31 0 37 0 5f 0 35 0 30 0 31 0 33 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 36 0 34 0 33 0 39 0 35 0 31 0 35 0 5f 0 32 0 39 0 34 0 35 0 35 0 36 0 5f 0 36 0 32 0 30 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 37 0 34 0 39 0 31 0 31 0 37 0 31 0 5f 0 31 0 33 0 35 0 31 0 31 0 34 0 5f 0 36 0 36 0 38 0 32 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 37 0 37 0 36 0 34 0 37 0 38 0 31 0 5f 0 37 0 37 0 35 0 35 0 35 0 31 0 5f 0 36 0 38 0 32 0 39 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 33 0 31 0 37 0 37 0 39 0 35 0 33 0 5f 0 33 0 31 0 34 0 31 0 30 0 33 0 5f 0 31 0 36 0 34 0 39 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 38 0 39 0 30 0 30 0 32 0 30 0 33 0 5f 0 39 0 35 0 30 0 34 0 36 0 38 0 5f 0 34 0 34 0 39 0 38 </value>
+						<value>0 0 0 14 0 0 0 1 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 38 0 39 0 30 0 30 0 32 0 30 0 33 0 5f 0 39 0 35 0 30 0 34 0 36 0 38 0 5f 0 34 0 34 0 39 0 38 0 0 0 1 0 0 0 ce 0 0 0 e4 0 0 0 9 0 0 0 a 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 30 0 30 0 38 0 39 0 34 0 36 0 38 0 5f 0 37 0 37 0 39 0 37 0 34 0 39 0 5f 0 32 0 33 0 32 0 0 0 28 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 36 0 38 0 38 0 38 0 30 0 37 0 38 0 5f 0 32 0 37 0 31 0 30 0 33 0 5f 0 33 0 35 0 37 0 30 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 31 0 37 0 30 0 35 0 39 0 33 0 37 0 5f 0 36 0 39 0 31 0 37 0 35 0 37 0 5f 0 31 0 31 0 39 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 38 0 33 0 30 0 35 0 32 0 33 0 34 0 5f 0 38 0 32 0 30 0 38 0 37 0 37 0 5f 0 34 0 32 0 31 0 35 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 39 0 37 0 34 0 32 0 33 0 35 0 39 0 5f 0 39 0 30 0 35 0 32 0 31 0 37 0 5f 0 35 0 30 0 31 0 33 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 36 0 34 0 33 0 39 0 35 0 31 0 35 0 5f 0 32 0 39 0 34 0 35 0 35 0 36 0 5f 0 36 0 32 0 30 0 37 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 37 0 34 0 39 0 31 0 31 0 37 0 31 0 5f 0 31 0 33 0 35 0 31 0 31 0 34 0 5f 0 36 0 36 0 38 0 32 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 34 0 37 0 37 0 36 0 34 0 37 0 38 0 31 0 5f 0 37 0 37 0 35 0 35 0 35 0 31 0 5f 0 36 0 38 0 32 0 39 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 33 0 31 0 37 0 37 0 39 0 35 0 33 0 5f 0 33 0 31 0 34 0 31 0 30 0 33 0 5f 0 31 0 36 0 34 0 39 0 0 0 29 0 5f 0 31 0 32 0 5f 0 35 0 5f 0 31 0 5f 0 33 0 66 0 62 0 30 0 31 0 39 0 32 0 5f 0 31 0 31 0 38 0 34 0 33 0 33 0 38 0 39 0 30 0 30 0 32 0 30 0 33 0 5f 0 39 0 35 0 30 0 34 0 36 0 38 0 5f 0 34 0 34 0 39 0 38 </value>
 						<multiline xmi:value='false'/>
 					</mdElement>
 					<mdElement elementClass='StringProperty'>
@@ -8122,7 +8143,7 @@
 					<mdElement elementClass='StringProperty'>
 						<propertyID>INFO_PROPERTY</propertyID>
 						<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-						<value>53 4b 4e 6 24 3c 68 1f 36 7c dd a8 56 32 86 c2 4c 71 ef 7f 69 a7 8 5b ae 19 54 ff f5 9 fc 50 4d c7 5d f f4 54 23 c f8 ed 79 d2 1c 20 24 14 64 d3 d4 c6 b0 de 29 cd 31 e5 ff da c8 5d 83 5f c0 ff 19 36 e5 3f 5a </value>
+						<value>53 4b 4e 6 24 3c 68 1f 36 7c dd a8 56 32 86 c2 4c 71 ef 7f 69 a7 b 53 ae 1d 55 ff f4 1 fc 50 4d c7 5d f f4 54 23 c f8 ed 79 d2 1c 20 24 14 64 d3 d4 c6 b0 de 29 cd 31 e5 ff da c8 5d 83 5f c0 ff 19 36 e5 3f 5a </value>
 						<multiline xmi:value='false'/>
 					</mdElement>
 					<mdElement elementClass='LIST_PROPERTY'>
