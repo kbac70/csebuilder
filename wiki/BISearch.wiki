@@ -7,7 +7,7 @@ Here is the *[http://gadgets.kbac70.googlepages.com Business Intelligence (BI) S
 = How does it look like? =
 http://gadgets.kbac70.googlepages.com/bisearch.jpg
 
-= The JavaScript code Snippets = 
+= The JS code Snippets = 
 Here is the main snippet of JavaScript written to access the engine:
 {{{
     <script type="text/javascript">
