@@ -1,9 +1,13 @@
 #summary The first Custom Search Engine created using the CSE Builder
 #labels Implementation
 
-Here is the *Business Intelligence (BI) Search* which got build using [http://gadgets.kbac70.googlepages.com/csebuilder.html CSE Builder] and Google CSE AJAX APIs. It aims to help when searching for business intelligence related content.
+= First Engine created using CSE Builder =
+Here is the *[http://gadgets.kbac70.googlepages.com Business Intelligence (BI) Search]* which got build using [http://gadgets.kbac70.googlepages.com/csebuilder.html CSE Builder] and Google CSE AJAX APIs. It aims to help when searching for business intelligence related content.
 
+= How does it look like? =
+http://gadgets.kbac70.googlepages.com/bisearch.jpg
 
+= The JavaScript code Snippets = 
 Here is the main snippet of JavaScript written to access the engine:
 {{{
     <script type="text/javascript">
@@ -103,7 +107,7 @@ Here is the main snippet of JavaScript written to access the engine:
     </script>
 }}}
 
-It is being driven of the customized Tag Roll as predefined by the Delicious folks. So that user by clicking the tag name can change category of the current search. As the JavaScript snippet demonstrates:
+It is being driven of the customized Tag Roll as predefined by the Delicious folks. So that user, by clicking the tag name, can change category of the current search. As the a bit obfuscated JavaScript snippet demonstrates:
 {{{
     <div id="tagCloud">
       <script type="text/javascript">
