@@ -1,5 +1,5 @@
 # csebuilder
-Automatically exported from code.google.com/p/csebuilder
+Automatically exported from [code.google.com/p/csebuilder](https://code.google.com/p/csebuilder/)
 
 ##Make your Google CSE Delicious!
 
