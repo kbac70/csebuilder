@@ -1,0 +1,128 @@
+# First Engine created using CSE Builder #
+Here is the **[Business Intelligence (BI) Search](http://gadgets.kbac70.googlepages.com)** which got build using [CSE Builder](http://gadgets.kbac70.googlepages.com/csebuilder.html) and Google CSE AJAX APIs. It aims to help when searching for business intelligence related content.
+
+# How does it look like? #
+![http://gadgets.kbac70.googlepages.com/bisearch.jpg](http://gadgets.kbac70.googlepages.com/bisearch.jpg)
+
+# The JS code Snippets #
+Here is the main snippet of JavaScript written to access the engine:
+```
+    <script type="text/javascript">
+
+      var cseId = <THE_CSE_ID>;
+
+	  var currentCategory;
+	  var searcher;
+	  var options;
+	  var searchForm;
+
+	  function changeCategory(toValue) {
+        if(toValue != "" ) {
+	      currentCategory = toValue.id.substring(4);
+        }
+	    setupNewSearcher();
+	    searchForm.execute(currentCategory);
+	  }
+
+	  function setupNewSearcher() {
+	    searcher = new GwebSearch();
+	    options = new GsearcherOptions();
+	    // Site Restrict to CSE ID
+	    if (currentCategory && currentCategory!="") {
+	      searcher.setSiteRestriction(cseId, currentCategory);
+	    } else {
+	      searcher.setSiteRestriction(cseId);
+	    }
+	    searcher.setUserDefinedLabel(currentCategory);
+        options.setExpandMode(GSearchControl.EXPAND_MODE_OPEN);
+	  }
+
+      // the cse class encapsulates a search control
+      // control is driven by a shared search form
+      function cse() {
+        var sFormDiv = document.getElementById("searchForm");
+        var leftScDiv = document.getElementById("leftSearchControl");
+
+        // create a left, right search control
+        // create a custom search form
+        this.leftControl = new GSearchControl();
+        searchForm = new GSearchForm(true, sFormDiv);
+
+        // bind clear and submit functions
+        searchForm.setOnSubmitCallback(this, cse.prototype.onSubmit);
+        searchForm.setOnClearCallback(this, cse.prototype.onClear);
+
+        // set up for result sets
+        this.leftControl.setResultSetSize(GSearch.LARGE_RESULTSET);
+        this.leftControl.setLinkTarget(GSearch.LINK_TARGET_SELF);
+
+      	// configure control
+        setupNewSearcher();
+        this.leftControl.addSearcher(searcher, options);
+
+        var blogSearcher = new GblogSearch();
+		var blogOptions = new GsearcherOptions();
+		blogSearcher.setResultOrder(GSearch.ORDER_BY_RELEVANCE);
+        this.leftControl.addSearcher(blogSearcher);
+
+        // draw the control
+        var drawOptions = new GdrawOptions();
+        drawOptions.setDrawMode(GSearchControl.DRAW_MODE_TABBED);
+
+        this.leftControl.draw(leftScDiv, drawOptions);
+      }
+
+      // when the form fires a submit, grab its
+      // value and call the left and right control
+      cse.prototype.onSubmit = function(form) {
+        var q = form.input.value;
+        if (q && q!= "") {
+          this.leftControl.execute(q);
+        }
+        return false;
+      }
+
+      function init() {
+        // execute a starter search
+        currentCategory = "Business Intelligence"
+        changeCategory("");
+        searchForm.input.value = "";
+      }
+
+      // when the form fires a clear, call the left and right control
+      cse.prototype.onClear = function(form) {
+        this.leftControl.clearAllResults();
+        init();
+        return false;
+      }
+
+      function OnLoad() {
+        new cse();
+		init();
+      }
+      GSearch.setOnLoadCallback(OnLoad);
+    </script>
+```
+
+It is being driven of the customized Tag Roll as predefined by the Delicious folks. So that user, by clicking the tag name, can change category of the current search. As the a bit obfuscated JavaScript snippet demonstrates:
+```
+    <div id="tagCloud">
+      <script type="text/javascript">
+	(
+	  function(){ var ts={"<TAG:#"}
+      var ta=0,tz=100
+      function s(a,b,i,x){if(a>b){var m=(a-b)/Math.log(x),v=a-Math.floor(Math.log(i)*m)}else{var m=(b-a)/Math.log(x),v=Math.floor(Math.log(i)*m+a)};return v}
+      document.write('<style type="text/css">.delicious-tags{font-family:arial,sans-serif}.delicious-tags a img{border:0;display:inline;margin:0 0 0 2px;padding:0}.delicious-tags span{text-decoration:none}.delicious-tags a:hover{text-decoration:underline}.delicious-tags ul{list-style-type:none;margin:0;padding:0; text-align:justify}.delicious-cloud li{cursor:pointer;display:inline;text-align:justify;background-image:none !important;padding:0;margin:0}.delicious-cloud .delicious-tag-count{padding-left:0.2em;font-size:12px}.delicious-cloud li:before{content:"" !important}</style>')
+      var ca=[204,204,255],cz=[0,0,153],c=[]
+      document.write('<div class="delicious-tags" id="delicious-tags-bisearch"><ul class="delicious-cloud">')
+      for(var t in ts){
+       for (var i=0;i<3;i++) c[i]=s(ca[i],cz[i],ts[t]-ta,tz)
+        document.write('<li style="font-size:12px;line-height:1;"><span style="color:rgb('+c[0]+','+c[1]+','+c[2]+')" onclick="changeCategory(this)" id="tag_'+t+'">'+t+'</a> </li>');
+      }
+      document.write('<li> <a href="http://del.icio.us/bisearch"><img alt="Navigate to delicious to check the annotations." src="http://images.del.icio.us/static/img/delicious.small.gif" width="10" height="10" alt="my del.icio.us" /></a></li>')
+      document.write('</ul><br/>');
+      document.write('</div>') }
+     )()
+      </script>
+    </div>
+```

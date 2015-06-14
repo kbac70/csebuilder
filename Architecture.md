@@ -1,0 +1,13 @@
+The idea was to keep the subsystems small, low coupled and testable.
+But following the rule that:
+> a picture says a million words.
+
+I have created the demonstration discussing the architecture on canvas of the UML diagrams. So check up:
+  * The use case diagram for project functional requirements
+  * The deployment diagram for deployment details
+  * Sequence diagrams describing realization of the proposed use cases
+  * Class diagrams for layering and internal infrastructure
+  * Collaboration Diagrams for the algorithm descriptions
+
+For flash presentation of the architecture navigate [here](http://kbac70.blogspot.com/2007/07/custom-search-engine-builder.html)
+
